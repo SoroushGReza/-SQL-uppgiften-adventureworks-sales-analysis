@@ -1,8 +1,10 @@
 # AdventureWorks – Försäljningsanalys
 
 Detta projekt innehåller en försäljningsanalys av AdventureWorks-databasen.
+Syftet med analysen är att undersöka försäljningsmönster utifrån produkter, tid, regioner och kundtyper.
 
-Analysen är genomförd i en Jupyter Notebook där data hämtas från en SQL Server-databas och analyseras samt visualiseras med Pandas och Matplotlib.
+Analysen är genomförd i en Jupyter Notebook där data hämtas från en SQL Server-databas med hjälp av SQL,
+och analyseras samt visualiseras vidare i Python med Pandas och Matplotlib.
 
 ---
 
@@ -10,28 +12,33 @@ Analysen är genomförd i en Jupyter Notebook där data hämtas från en SQL Ser
 
 - `notebooks/`
   - `adventureworks_sales_analysis.ipynb`  
-    Innehåller hela analysen, SQL-frågor, visualiseringar och reflektioner.
+    Innehåller hela analysen inklusive SQL-frågor, visualiseringar, djupanalys och sammanfattning.
 
-- `data/`  
-  Innehåller backupfilen `AdventureWorks2025.bak` (ingår ej i GitHub-repot).
+- `.gitignore`  
+  Används för att exkludera lokala filer som virtuell miljö och databasbackup.
 
 - `.venv/`  
-  Lokal virtuell Python-miljö (ingår ej i GitHub).
+  Lokal virtuell Python-miljö (ingår ej i GitHub-repot).
 
 ---
 
 ## Databas
 
-Databasen körs lokalt i SQL Server via Docker Desktop på Windows.  
-Backupfilen `AdventureWorks2025.bak` återställs i containern och används sedan av notebooken via en Python-anslutning.
+Databasen som används är AdventureWorks2025 och körs lokalt i SQL Server via Docker Desktop på Windows.
+Databasen har återställts från en backupfil (`AdventureWorks2025.bak`) som tillhandahållits i kursen.
+Backupfilen ingår inte i GitHub-repot.
 
 ---
 
-## Hur projektet körs
+## Genomförande
 
-1. SQL Server startas i Docker Desktop
-2. Databasen återställs från backupfil
-3. Virtuell Python-miljö aktiveras
-4. Notebooken körs cell för cell
+Arbetet har genomförts i följande steg:
 
-Alla analyser och visualiseringar finns dokumenterade direkt i notebooken.
+1. Uppstart av SQL Server i Docker Desktop
+2. Återställning av AdventureWorks-databasen
+3. Anslutning till databasen från Python i Jupyter Notebook
+4. Insamling av data med SQL-frågor
+5. Analys och visualisering av data i Pandas och Matplotlib
+6. Fördjupad analys samt sammanfattning av resultat
+
+Alla analyser och visualiseringar är dokumenterade direkt i notebooken.
